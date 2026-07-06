@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name, a front-end web developer specializing in responsive HTML & CSS builds." />
+
+  <!-- Google Fonts: Sora (display), Inter (body), JetBrains Mono (labels/code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======================================================================
+       STICKY NAV — fixed to top of viewport (see .navbar in style.css).
+       Includes a hamburger button that only shows on mobile widths.
+       ====================================================================== -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="#home" class="nav-logo">JOSEPH<span class="dot">.</span>AKPATA</a>
+
+      <!-- Desktop nav links -->
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#contact">contact</a>
+      </nav>
+
+      <!-- Hamburger toggle, visible on mobile only -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMobilePanel">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown menu (hidden until nav-toggle is clicked) -->
+    <nav class="nav-mobile-panel" id="navMobilePanel" aria-label="Mobile navigation">
+      <a href="#home">home</a>
+      <a href="#about">about</a>
+      <a href="#projects">projects</a>
+      <a href="#skills">skills</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ====================================================================
+         HOME SECTION — full-screen photo.
+         TO ADD YOUR OWN PHOTO: replace the --hero-image value below (or in
+         style.css) with url('images/your-photo.jpg') and place that file
+         in the /images folder.
+         ==================================================================== -->
+    <section id="home" class="hero" style="--hero-image:url('/images/profile.jpg');">
+      <div class="hero-photo"></div>
+      <div class="hero-content">
+        <span class="eyebrow"> front-end web developer</span>
+        <h1 class="hero-name">Akpata Ndubuisi Joseph</h1>
+        <p class="hero-role">I build clean, responsive interfaces with HTML &amp; CSS </p>
+        <div class="hero-actions">
+          <!-- Resume link: points to the ATS-friendly PDF resume -->
+          <a class="btn btn-primary" href="images/Akpata-Joseph-CV.pdf" download>
+            ⬇ Download Résumé
+          </a>
+          <a class="btn btn-ghost" href="#projects">View Projects</a>
+        </div>
+      </div>
+      <span class="scroll-cue">scroll ↓</span>
+    </section>
+
+    <!-- ====================================================================
+         ABOUT SECTION — photo docked to the side (not full-screen).
+         TO ADD YOUR OWN PHOTO: replace the --about-image value below with
+         url('images/your-photo.jpg').
+         ==================================================================== -->
+    <section id="about" class="about">
+      <div class="section-inner">
+        <span class="eyebrow">// about</span>
+        <h2 class="section-title">A little about me</h2>
+        <p class="section-subtitle">
+          Where I've been, what I studied, and how I like to work.
+        </p>
+
+        <div class="about-grid">
+          <!-- Side photo -->
+          <div class="about-photo-wrap">
+            <div class="about-photo" style="--about-image:url('/images/about.jpg');"></div>
+            <span class="about-photo-tag">profile</span>
+          </div>
+
+          <!-- Bio, styled as a terminal window -->
+          <div>
+            <div class="terminal">
+              <div class="terminal-titlebar">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-filename">about</span>
+              </div>
+              <div class="terminal-body">
+                <p class="terminal-line"><span class="line-no">01</span><span><span class="terminal-comment"># Summary</span></span></p>
+                <p class="terminal-line"><span class="line-no">02</span><span>An aspiring student of a full-stack web development program, focused on <span class="terminal-string">"semantic HTML, modern CSS, and accessible UI."</span></span></p>
+                <p class="terminal-line"><span class="line-no">03</span><span><span class="terminal-comment"># What I care about</span></span></p>
+                <p class="terminal-line"><span class="line-no">04</span><span>Clean code, pixel-accurate layouts, and building things that work well on every screen size.</span></p>
+                <p class="terminal-line"><span class="line-no">05</span><span><span class="terminal-comment"># Currently</span></span></p>
+                <p class="terminal-line"><span class="line-no">06</span><span>Looking for a junior front-end / web developer role where I can keep growing.</span></p>
+              </div>
+            </div>
+
+            <div class="about-highlights">
+              <div class="highlight-card">
+                <div class="num">4</div>
+                <div class="label">Projects shipped</div>
+              </div>
+              <div class="highlight-card">
+                <div class="num">300+</div>
+                <div class="label">Hours of coding practice</div>
+              </div>
+              <div class="highlight-card">
+                <div class="num">100%</div>
+                <div class="label">Responsive builds</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PROJECTS SECTION — 4 project cards, each its own "file" card.
+         Each card shows: (1) a high-level summary of the problem, and
+         (2) a design → code → delivery commit trail of how it was built.
+         Update the href values to point at your live/deployed project and
+         its source code once hosted (e.g. on GitHub Pages).
+         ==================================================================== -->
+    <section id="projects" class="projects">
+      <div class="section-inner">
+        <span class="eyebrow">// projects/</span>
+        <h2 class="section-title">Featured projects</h2>
+        <p class="section-subtitle">
+          Four HTML &amp; CSS builds completed during my program, each solving a different layout and UX problem.
+        </p>
+
+        <div class="project-grid">
+
+          
+
+          <!-- PROJECT 2 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="project-filename">restaurant-site</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Local Restaurant Website</h3>
+
+              <p class="project-summary-label">Problem it solves</p>
+              <p class="project-summary">
+                Many small restaurants don't have a simple, mobile-friendly site where customers can view
+                the menu, hours, and location at a glance. This project built a lightweight multi-section
+                site that answers those questions in under 10 seconds of scrolling.
+              </p>
+
+              <p class="project-process-label">How I built it</p>
+              <div class="commit-log">
+                <div class="commit-row">
+                  <span class="commit-hash">design</span>
+                  <span class="commit-msg">Mapped out a one-page structure (hero, menu, hours, location) and picked a warm, appetite-friendly type pairing.</span>
+                </div>
+                <div class="commit-row">
+                  <span class="commit-hash">code</span>
+                  <span class="commit-msg">Built the menu as a semantic definition list styled with CSS, and embedded a responsive map section.</span>
+                </div>
+                <div class="commit-row">
+                  <span class="commit-hash">deliver</span>
+                  <span class="commit-msg">Ran a Lighthouse accessibility/performance pass and fixed contrast and alt-text issues before shipping.</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">Flexbox</span>
+                <span class="project-tag">Accessibility</span>
+              </div>
+
+              <div class="project-actions">
+                <a class="btn btn-primary" href=" https://josephakpata106-art.github.io/Mamaputonline-/" target="_blank" rel="noopener">View Live</a>
+                <a class="btn btn-outline" href="https://github.com/josephakpata106-art/Mamaputonline-.git" target="_blank" rel="noopener">View Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="project-filename">personal-blog</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Personal Blog Template</h3>
+
+              <p class="project-summary-label">Problem it solves</p>
+              <p class="project-summary">
+                New writers often reach for heavy blogging platforms just to publish a few posts.
+                This project set out to prove a fast, readable blog template could be built with plain
+                HTML/CSS — no framework, no build step, easy to hand-edit.
+              </p>
+
+              <p class="project-process-label">How I built it</p>
+              <div class="commit-log">
+                <div class="commit-row">
+                  <span class="commit-hash">design</span>
+                  <span class="commit-msg">Prioritized readability: a constrained line length, generous line-height, and a calm two-color palette.</span>
+                </div>
+                <div class="commit-row">
+                  <span class="commit-hash">code</span>
+                  <span class="commit-msg">Structured posts with semantic &lt;article&gt;/&lt;time&gt; tags and a reusable card component for the post list.</span>
+                </div>
+                <div class="commit-row">
+                  <span class="commit-hash">deliver</span>
+                  <span class="commit-msg">Checked heading hierarchy and screen-reader flow, then published as a static template.</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">Semantic Markup</span>
+                <span class="project-tag">Typography</span>
+              </div>
+
+              <div class="project-actions">
+                <a class="btn btn-primary" href=" https://josephakpata106-art.github.io/My-personal-portfolio/" target="_blank" rel="noopener">View Live</a>
+                <a class="btn btn-outline" href="https://github.com/josephakpata106-art/My-personal-portfolio.git" target="_blank" rel="noopener">View Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="project-filename">product-landing</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title"> Product Landing Page</h3>
+
+              <p class="project-summary-label">Problem it solves</p>
+              <p class="project-summary">
+                A landing page's job is to turn a visitor into a sign-up within seconds. This project
+                practiced that exact problem: a clear value proposition, a pricing section, and a single
+                obvious call-to-action, all above and below the fold.
+              </p>
+
+              <p class="project-process-label">How I built it</p>
+              <div class="commit-log">
+                <div class="commit-row">
+                  <span class="commit-hash">design</span>
+                  <span class="commit-msg">Wireframed a hero → features → pricing → CTA flow, borrowing conventions users already recognize.</span>
+                </div>
+                <div class="commit-row">
+                  <span class="commit-hash">code</span>
+                  <span class="commit-msg">Built a 3-column pricing grid with CSS Grid, and made the CTA button sticky-visible on scroll.</span>
+                </div>
+                <div class="commit-row">
+                  <span class="commit-hash">deliver</span>
+                  <span class="commit-msg">Cross-browser tested in Chrome/Firefox/Safari and fixed a Safari flexbox gap bug before final delivery.</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS Grid</span>
+                <span class="project-tag">Cross-browser</span>
+              </div>
+
+              <div class="project-actions">
+                <a class="btn btn-primary" href="projects/project-4-product-landing.html" target="_blank" rel="noopener">View Live</a>
+                <a class="btn btn-outline" href="projects/project-4-product-landing.html" target="_blank" rel="noopener">View Code</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SKILLS SECTION
+         ==================================================================== -->
+    <section id="skills" class="skills">
+      <div class="section-inner">
+        <span class="eyebrow">// skills.json</span>
+        <h2 class="section-title">What I work with</h2>
+        <p class="section-subtitle">Core languages, tools, and concepts from my program and independent practice.</p>
+
+        <div class="skills-grid">
+          <div class="skill-group">
+            <p class="skill-group-title">languages</p>
+            <div class="skill-pill-list">
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS</span>
+              <span class="skill-pill">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group-title">tools</p>
+            <div class="skill-pill-list">
+              <span class="skill-pill">Git &amp; GitHub</span>
+              <span class="skill-pill">VS Code</span>
+              <span class="skill-pill">Figma</span>
+              <span class="skill-pill">Chrome DevTools</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group-title">concepts</p>
+            <div class="skill-pill-list">
+              <span class="skill-pill">Responsive Design</span>
+              <span class="skill-pill">Flexbox / Grid</span>
+              <span class="skill-pill">Accessibility (WCAG)</span>
+              <span class="skill-pill">Cross-browser Testing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTACT SECTION
+         ==================================================================== -->
+    <section id="contact" class="contact">
+      <div class="section-inner">
+        <span class="eyebrow">// contact.js</span>
+        <h2 class="section-title">Let's work together</h2>
+        <p class="section-subtitle">Have a role or project in mind? I'd love to hear from you.</p>
+
+        <div class="contact-grid">
+          <div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">@</div>
+              <div>
+                <p class="contact-info-label">Email</p>
+                <p class="contact-info-value">josephakpata106@email.com</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">in</div>
+              <div>
+                <p class="contact-info-label">LinkedIn</p>
+                <p class="contact-info-value">linkedin.com</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">&lt;/&gt;</div>
+              <div>
+                <p class="contact-info-label">GitHub</p>
+                <p class="contact-info-value">https://github.com/josephakpata106-art</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact form: front-end only. Connect to a form service
+               (e.g. Formspree) or a backend endpoint to make it functional. -->
+          <form class="contact-form" id="contactForm">
+            <div>
+              <label class="form-label" for="name">Name</label>
+              <input class="form-input" type="text" id="name" name="name" required />
+            </div>
+            <div>
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" name="message" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <p class="form-status" id="formStatus"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       STICKY FOOTER — fixed to bottom of viewport, IDE status-bar style.
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-status"><span class="dot"></span> available for work</span>
+      <span class="footer-socials">
+        <a href="mailto:josephakpata106@email.com" aria-label="Email">Email</a>
+        <a href="https://github.com/josephakpata106-art" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        <a href="https://linkedin.com/in/your-name" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+      </span>
+      <span>© 2026 Your Name</span>
+    </div>
+  </footer>
+
+
+</body>
+</html>
